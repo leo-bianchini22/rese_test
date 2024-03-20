@@ -13,10 +13,9 @@
 
 <body>
     <header class="header">
-        <div class="header__inner">
-            <a class="header__logo" href="/">
-                Rese
-            </a>
+        <div class="header_inner">
+            <a class="header_nav" href="/nav"></a>
+            <h1 class="header_logo">Rese</h1>
         </div>
     </header>
 

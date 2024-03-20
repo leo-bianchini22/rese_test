@@ -10,4 +10,9 @@ class ReseController extends Controller
     {
         return view('index');
     }
+
+    public function thanks()
+    {
+        return view('thanks');
+    }
 }

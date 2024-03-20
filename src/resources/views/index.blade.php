@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="__content">
+<div class="_content">
     <h1>hello world</h1>
 </div>
 @endsection

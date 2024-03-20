@@ -1,0 +1,65 @@
+.auth_content {
+    margin: 0 auto;
+    padding: 10%;
+    background-color: #fafafa;
+}
+
+.form {
+    width: 100%;
+    margin: 0 auto 200px;
+    max-width: 1230px;
+}
+
+.form_inner {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.form_ttl {
+    width: 500px;
+    margin: 0 auto;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.form_ttl p {
+    color: white;
+    padding-left: 20px;
+}
+
+.form_group_content {
+    background-color: white;
+    padding: 20px 30px;
+}
+
+.form_group {
+    padding: 10px;
+}
+
+.form_input input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    width: 394px;
+    height: 30px;
+}
+
+.form_input img {
+    width: 20px;
+    height: 20px;
+}
+
+.form_button {
+    background-color: white;
+    padding: 0 40px 30px;
+    text-align: right;
+}
+
+.form_button button {
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
