@@ -1,0 +1,202 @@
+.mypage_content {
+    background-color: #fafafa;
+}
+
+.mypage_inner {
+    padding: 0 5% 100px;
+}
+
+.user_name {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mypage_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservation_info {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.favorite_info {
+    flex: 3;
+    margin-left: 20px;
+}
+
+.reservation_card {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+}
+
+.reservation_card_header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.home_inner {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reservation_ttl, .favorite_ttl {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservation_ttl a {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 12px 0;
+    color: black;
+}
+
+.reservation_card_header p {
+    margin: 0;
+    padding: 10px;
+}
+
+.delete button {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.delete button::before,
+.delete button::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: white;
+    top: 5px;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.delete button::before {
+    transform: rotate(45deg);
+}
+
+.delete button::after {
+    transform: rotate(-45deg);
+}
+
+.reservation_table table {
+    width: 100%;
+}
+
+.reservation_table_row td {
+    padding: 10px 0;
+    width: 20%;
+}
+
+.change_reservation {
+    margin: 0;
+    text-align: right;
+}
+
+.change_reservation button {
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: blue;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.shop_card_group {
+    width: calc(45% - 20px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.shop_card_group:nth-child(odd) {
+    clear: left;
+}
+
+.shop_card_inner {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px gray;
+}
+
+.shop_img img {
+    width: 100%;
+    height: auto;
+}
+
+.shop_item {
+    padding: 20px 10px;
+}
+
+.shop_name h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.shop_category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shop_category li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.shop_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px;
+}
+
+.shop_detail a {
+    display: inline-block;
+    background-color: blue;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.shop_detail a:hover {
+    background-color: #007bff;
+}
+
+.favorite_button {
+    background-color: transparent;
+    color: #fafafa;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.favorite_button img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}

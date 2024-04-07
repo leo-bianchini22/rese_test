@@ -1,0 +1,136 @@
+.header_inner_right {
+    background-color: white;
+    padding: 0 5px;
+    height: 50px;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 5px;
+}
+
+.search_form {
+    display: flex;
+}
+
+.search_select {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-right: 1px solid lightgray;
+}
+
+.search_submit {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search_input {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.search_submit img {
+    width: 20px;
+    height: 20px;
+}
+
+.favorite_item {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.shop_card_group {
+    width: calc(25% - 20px);
+    margin: 10px;
+}
+
+.shop_card_inner {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px gray;
+    width: 100%;
+}
+
+.shop_img img {
+    width: 100%;
+    height: auto;
+}
+
+.shop_item {
+    padding: 20px 10px;
+}
+
+.shop_name h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.shop_review {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+}
+
+.star {
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+.shop_category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shop_category li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.shop_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px;
+}
+
+.shop_detail a {
+    display: inline-block;
+    background-color: blue;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.shop_detail a:hover {
+    background-color: #007bff;
+}
+
+.favorite_button {
+    background-color: transparent;
+    color: #fafafa;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.favorite_button img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}

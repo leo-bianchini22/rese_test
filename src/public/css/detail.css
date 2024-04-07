@@ -1,0 +1,155 @@
+.detail_content {
+    background-color: #fafafa;
+}
+
+.detail_inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 100px;
+}
+
+.shop_info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.shop_reservation {
+    flex: 1;
+    margin-left: 20px;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.back_form {
+    display: flex;
+    align-items: center;
+}
+
+.back_form button {
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 10px;
+    height: 30px;
+}
+
+.shop_name {
+    margin: 0;
+    font-size: 24px;
+}
+
+.shop_img img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.shop_category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shop_category li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.shop_detail p {
+    margin-top: 0;
+}
+
+.review_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review_info button {
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.reservation_text {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    margin: 20px;
+}
+
+.reservation_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.reservation_form_inner {
+    margin: 20px;
+}
+
+.reservation_form_inner input {
+    display: block;
+    height: 30px;
+    width: 30%;
+    padding: 0 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.reservation_form_inner select {
+    display: block;
+    height: 30px;
+    width: 90%;
+    padding: 0 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.reservation_confirm {
+    margin: 20px auto 20px 0;
+    padding: 20px;
+    width: 90%;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 55, 255);
+}
+
+.reservation_table td {
+    padding: 5px 50px 5px 5px;
+    color: white;
+}
+
+.reservation_submit button {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 0 0 4px 4px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.reservation_submit a {
+    padding: 10px 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: darkblue;
+    color: white;
+    border-radius: 0 0 4px 4px;
+    margin-top: auto;
+}
+
+.star {
+    color: #ffcc00;
+    font-size: 20px;
+}

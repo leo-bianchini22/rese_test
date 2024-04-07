@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header_inner">
-            <form class="form" action="/nav/back" method="post">
+            <form class="form" action="/back" method="post">
                 @csrf
                 <button class="button_back" type="submit"></button>
             </form>
