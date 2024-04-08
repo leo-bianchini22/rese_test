@@ -1,11 +1,12 @@
 .detail_content {
     background-color: #fafafa;
+    padding-bottom: 100px;
 }
 
 .detail_inner {
     display: flex;
     justify-content: space-between;
-    padding: 0 5% 100px;
+    padding: 0 5%;
 }
 
 .shop_info {
@@ -18,6 +19,7 @@
     margin-left: 20px;
     background-color: blue;
     border-radius: 5px;
+    position: relative;
 }
 
 .back_form {
@@ -43,7 +45,7 @@
 }
 
 .shop_img img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin-top: 20px;
 }
@@ -83,14 +85,15 @@
 }
 
 .reservation_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90%;
+    height: 100%;
 }
 
 .reservation_form_inner {
     margin: 20px;
+}
+
+.form_group {
+    margin: 10px 0;
 }
 
 .reservation_form_inner input {
@@ -98,7 +101,6 @@
     height: 30px;
     width: 30%;
     padding: 0 5px;
-    margin: 10px 0;
     border-radius: 5px;
     border: none;
 }
@@ -108,7 +110,6 @@
     height: 30px;
     width: 90%;
     padding: 0 5px;
-    margin: 10px 0;
     border-radius: 5px;
 }
 
@@ -126,6 +127,14 @@
     color: white;
 }
 
+.reservation_submit {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 1px);
+}
+
 .reservation_submit button {
     padding: 10px 20px;
     width: 100%;
@@ -134,7 +143,6 @@
     border: none;
     border-radius: 0 0 4px 4px;
     cursor: pointer;
-    margin-top: auto;
 }
 
 .reservation_submit a {
@@ -146,10 +154,16 @@
     background-color: darkblue;
     color: white;
     border-radius: 0 0 4px 4px;
-    margin-top: auto;
 }
 
 .star {
     color: #ffcc00;
     font-size: 20px;
+}
+
+.error{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: white;
 }

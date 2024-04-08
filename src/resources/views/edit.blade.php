@@ -43,7 +43,10 @@
                             ({{ number_format($avgRating, 1) }})
                     </p>
                     <p>レビュー数: {{ $restaurant->reviews->count() }}</p>
-                    <a href="">詳しいレビューを見る</a>
+                    <form action="/review/detail">
+                        <input type="hidden" name="id" value="{{ $restaurant->id }}">
+                        <button type="submit">詳しいレビューを見る</button>
+                    </form>
                     @else
                     <p>まだレビューはありません。</p>
                     @endif

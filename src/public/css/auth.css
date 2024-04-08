@@ -45,6 +45,10 @@
     height: 30px;
 }
 
+.form_error {
+    color: red;
+}
+
 .form_input img {
     width: 20px;
     height: 20px;

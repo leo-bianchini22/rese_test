@@ -60,7 +60,7 @@
                     <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
                     <div class="form_group">
                         <label for="rating">評価</label>
-                        <select name="rating" id="rating" required>
+                        <select name="rating" id="rating">
                             <option value="">評価を選択してください</option>
                             <option value="1">1 ☆</option>
                             <option value="2">2 ☆☆</option>
@@ -68,10 +68,20 @@
                             <option value="4">4 ☆☆☆☆</option>
                             <option value="5">5 ☆☆☆☆☆</option>
                         </select>
+                        @error('rating')
+                        <div class="error">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="form_group">
                         <label for="comment">コメント</label>
-                        <textarea name="comment" id="comment" cols="30" rows="5" required placeholder="コメントを入力してください"></textarea>
+                        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="コメントを入力してください"></textarea>
+                        @error('comment')
+                        <div class="error">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="review_submit">

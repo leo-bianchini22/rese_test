@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReservationRequest;
 use App\Models\Reservation;
 use App\Models\Restaurant;
 use Carbon\Carbon;
@@ -31,7 +32,7 @@ class ReservationController extends Controller
         return view('detail', compact('restaurant', 'times', 'peoples'));
     }
 
-    public function storeReservation(Request $request)
+    public function storeReservation(ReservationRequest $request)
     {
         $reservationData = $request->only([
             'restaurant_id',
@@ -76,7 +77,7 @@ class ReservationController extends Controller
         return view('edit', compact('restaurant', 'times', 'peoples', 'reservation'));
     }
 
-    public function updateReservation(Request $request)
+    public function updateReservation(ReservationRequest $request)
     {
         $reservationData = $request->only([
             'restaurant_id',

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReviewRequest;
 use App\Models\Reservation;
 use App\Models\Restaurant;
 use App\Models\Review;
@@ -20,7 +21,7 @@ class ReviewController extends Controller
         return view('review', compact('restaurant', 'reservations'));
     }
 
-    public function store(Request $request)
+    public function store(ReviewRequest $request)
     {
         $reviewData = $request->only([
             'restaurant_id',
