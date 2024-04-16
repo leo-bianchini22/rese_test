@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\NavigateController;
 use App\Http\Controllers\ReseController;
@@ -39,3 +40,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/mypage', [ReseController::class, 'myPage']);
     Route::post('/favorite/toggle/{id}', [FavoriteController::class, 'toggleFavorite'])->name('toggleFavorite');
 });
+
+Route::get('/restaurant/edit', [AdminController::class, 'editRestaurant']);
+Route::post('/restaurant/update', [AdminController::class, 'updateRestaurant']);

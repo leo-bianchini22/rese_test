@@ -74,7 +74,7 @@ class ReservationController extends Controller
 
         $reservation = Reservation::find($request->id);
 
-        return view('edit', compact('restaurant', 'times', 'peoples', 'reservation'));
+        return view('edit-reservation', compact('restaurant', 'times', 'peoples', 'reservation'));
     }
 
     public function updateReservation(ReservationRequest $request)

@@ -3,9 +3,31 @@
     <div class="reservation_form_inner">
         <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
 
+        <!-- 予約確認 -->
+        <div class="reservation_confirm">
+            <table class="reservation_table">
+                <tr class="reservation_table_row">
+                    <td>変更前のデータ</td>
+                    <td></td>
+                </tr>
+                <tr class="reservation_table_row">
+                    <td>Date</td>
+                    <td>{{ $reservation->reservation_date }}</td>
+                </tr>
+                <tr class="reservation_table_row">
+                    <td>Time</td>
+                    <td>{{ date('H:i', strtotime($reservation->reservation_time)) }}</td>
+                </tr>
+                <tr class="reservation_table_row">
+                    <td>Number</td>
+                    <td>{{ $reservation->number_of_people }}人</td>
+                </tr>
+            </table>
+        </div>
+
         <!-- 予約日 -->
         <div class="form_group">
-            <input name="reservation_date" type="date" min="{{ now()->toDateString() }}" value="{{ $reservation->reservation_date }}" wire:model="date_live">
+            <input name="reservation_date" type="date" min="{{ now()->toDateString() }}" wire:model="date_live">
             @error('reservation_date')
             <div class="error">
                 {{ $message }}
@@ -16,7 +38,7 @@
         <!-- 予約時間 -->
         <div class="form_group">
             <select name="reservation_time" id="reservation_time" wire:model="time_live">
-                <option value="{{ $reservation->reservation_time }}" selected>{{ date('H:i', strtotime($reservation->reservation_time)) }}</option>
+                <option value="">時刻を選択してください</option>
                 @foreach ($times as $time)
                 <option value="{{ $time }}">{{ $time }}</option>
                 @endforeach
@@ -31,7 +53,7 @@
         <!-- 人数 -->
         <div class="form_group">
             <select name="number_of_people" id="number_of_people" wire:model="number_live">
-                <option value="{{ $reservation->number_of_people }}" selected>{{ $reservation->number_of_people }}人</option>
+                <option value="">人数を選択してください</option>
                 @foreach ($peoples as $people)
                 <option value="{{ $people }}">{{ $people }}人</option>
                 @endforeach
@@ -46,6 +68,10 @@
         <!-- 予約確認 -->
         <div class="reservation_confirm">
             <table class="reservation_table">
+                <tr class="reservation_table_row">
+                    <td>変更後のデータ</td>
+                    <td></td>
+                </tr>
                 <tr class="reservation_table_row">
                     <td>Shop</td>
                     <td>{{ $restaurant->name }}</td>

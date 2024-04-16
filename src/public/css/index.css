@@ -46,7 +46,6 @@
 .home_inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .shop_card_group {

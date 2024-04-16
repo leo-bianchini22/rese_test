@@ -9,11 +9,19 @@
 <div class="detail_content">
     <div class="detail_inner">
         <div class="shop_info">
-            <form class="back_form" action="/back" method="post">
-                @csrf
-                <button type="submit">&lt;</button>
-                <h2 class="shop_name">{{ $restaurant->name }}</h2>
-            </form>
+            <div class="shop_form">
+                <form class="back_form" action="/back" method="post">
+                    @csrf
+                    <button type="submit">&lt;</button>
+                    <h2 class="shop_name">{{ $restaurant->name }}</h2>
+                </form>
+                @hasanyrole('admin')
+                <form class="edit_form" action="/restaurant/edit" method="get">
+                    <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
+                    <button type="submit">編集する</button>
+                </form>
+                @endhasanyrole
+            </div>
             <div class="shop_img">
                 <img src="{{ $restaurant->image_url }}" alt="Restaurant Image">
             </div>
@@ -44,6 +52,7 @@
                     </p>
                     <p>レビュー数: {{ $restaurant->reviews->count() }}</p>
                     <form action="/review/detail">
+                        @csrf
                         <input type="hidden" name="id" value="{{ $restaurant->id }}">
                         <button type="submit">詳しいレビューを見る</button>
                     </form>
