@@ -23,6 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'representative_id',
     ];
 
     /**
@@ -52,5 +53,10 @@ class User extends Authenticatable
     public function reservations()
     {
         return $this->hasMany(Reservation::class);
+    }
+
+    public function representative()
+    {
+        return $this->belongsTo(Representative::class);
     }
 }

@@ -13,6 +13,7 @@ class ReservationController extends Controller
 {
     public function detailById($id)
     {
+        $user = Auth::user();
         $restaurant = Restaurant::with('reviews')->find($id);
 
         // 時間の選択肢を作成
@@ -29,7 +30,7 @@ class ReservationController extends Controller
         // 予約人数の選択肢を作成
         $peoples = range(1, 10);
 
-        return view('detail', compact('restaurant', 'times', 'peoples'));
+        return view('detail', compact('restaurant','user', 'times', 'peoples'));
     }
 
     public function storeReservation(ReservationRequest $request)
