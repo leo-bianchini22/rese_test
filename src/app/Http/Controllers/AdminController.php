@@ -47,14 +47,34 @@ class AdminController extends Controller
             'representative_id' => $request->representative_id,
         ]);
 
-        // 代表者のロールを作成
-        $representativeRole = Role::create(['name' => 'representative']);
-        $representative->assignRole($representativeRole);
+        // 代表者のロールを割り当てる
+        $representative->assignRole('representative');
 
         Representative::create([
             'restaurant_id' => $request->restaurant_id,
         ]);
 
         return redirect('/');
+    }
+
+    public function admin()
+    {
+        $representatives = User::whereNotNull('representative_id')->paginate(10);
+
+        return view('admin', compact('representatives'));
+    }
+
+    public function deleteRepresentative(Request $request)
+    {
+        User::find($request->id)->delete();
+        return redirect('/admin');
+    }
+
+    public function representative()
+    {
+        $user = Auth::user();
+        $reservations = Reservation::where('restaurant_id', $user->representative->restaurant_id)->paginate(5);
+
+        return view('admin-representative', compact('reservations'));
     }
 }

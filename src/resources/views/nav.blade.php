@@ -34,9 +34,19 @@
                             <button type="submit">Logout</button>
                         </form>
                     </li>
+                    @if(auth()->user()->hasRole('admin'))
+                    <li>
+                        <a href="/admin">Admin</a>
+                    </li>
+                    @elseif(auth()->user()->hasRole('representative'))
+                    <li>
+                        <a href="/admin/representative">Admin</a>
+                    </li>
+                    @else
                     <li>
                         <a href="/mypage">Mypage</a>
                     </li>
+                    @endif
                     @endauth
                     @guest
                     <li>

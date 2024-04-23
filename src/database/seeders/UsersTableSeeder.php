@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role as ModelsRole;
 
 class UsersTableSeeder extends Seeder
@@ -25,5 +24,8 @@ class UsersTableSeeder extends Seeder
         // ロール(役割)作成
         $adminRole = ModelsRole::create(['name' => 'admin']);
         $admin->assignRole($adminRole);
+
+        // 代表者のロールを作成
+        $representativeRole = ModelsRole::create(['name' => 'representative']);
     }
 }

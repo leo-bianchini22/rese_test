@@ -44,3 +44,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/restaurant/edit', [AdminController::class, 'editRestaurant']);
 Route::post('/restaurant/update', [AdminController::class, 'updateRestaurant']);
 Route::post('/register/representative', [AdminController::class, 'storeRepresentative']);
+Route::get('/admin', [AdminController::class, 'admin']);
+Route::get('/admin/representative', [AdminController::class, 'representative']);
+Route::delete('/representative/delete', [AdminController::class, 'deleteRepresentative']);

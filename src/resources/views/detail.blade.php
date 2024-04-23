@@ -17,6 +17,7 @@
                 </form>
                 @hasanyrole('admin')
                 <form class="edit_form" action="/restaurant/edit" method="get">
+                    @csrf
                     <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
                     <button type="submit">編集する</button>
                 </form>
@@ -24,6 +25,7 @@
                 @hasrole('representative')
                 @if($restaurant->id == $user->representative_id)
                 <form class="edit_form" action="/restaurant/edit" method="get">
+                    @csrf
                     <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
                     <button type="submit">編集する</button>
                 </form>

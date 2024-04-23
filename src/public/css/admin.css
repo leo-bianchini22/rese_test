@@ -1,0 +1,131 @@
+.admin_content {
+    background-color: #fafafa;
+}
+
+.admin_inner {
+    padding: 0 5% 100px;
+}
+
+.user_name {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.representative_info,
+.reservation_info {
+    margin-top: 20px;
+}
+
+.representative_ttl,
+.reservation_ttl {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.representative_ttl p,
+.reservation_ttl p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.representative_table,
+.reservation_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.representative_table table {
+    width: 100%;
+}
+
+.representative_table_row {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.representative_table_row:last-child {
+    border-bottom: none;
+}
+
+.representative_table td {
+    padding: 10px 0;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.delete form {
+    display: inline;
+}
+
+.delete button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete button:hover {
+    background-color: #c82333;
+}
+
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.pagination .page-link {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination .page-link:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.reservation_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reservation_card {
+    flex: 0 0 calc(20% - 20px);
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+}
+
+.reservation_card_header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}

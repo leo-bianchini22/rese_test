@@ -41,6 +41,12 @@ class Restaurant extends Model
         return $this->hasMany(Review::class);
     }
 
+    // Representative モデルとのリレーション
+    public function representative()
+    {
+        return $this->hasOne(Representative::class);
+    }
+
     // 検索
     public function scopeAreaSearch($query, $area_id)
     {

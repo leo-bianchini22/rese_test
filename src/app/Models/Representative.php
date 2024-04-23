@@ -17,4 +17,9 @@ class Representative extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    public function restaurant()
+    {
+        return $this->belongsTo(Restaurant::class);
+    }
 }
