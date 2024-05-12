@@ -95,3 +95,23 @@ svg.w-5.h-5 {
     color: #fff;
     border-color: #007bff;
 }
+
+@media (max-width: 768px) {
+    .list_inner {
+        padding: 0 3% 100px;
+    }
+
+    .reservation_card {
+        flex: 0 0 calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .list_inner {
+        padding: 0 5px 100px;
+    }
+
+    .reservation_card {
+        flex: 0 0 calc(100% - 20px);
+    }
+}

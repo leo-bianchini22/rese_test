@@ -26,7 +26,8 @@
     align-items: center;
 }
 
-.back_form button {
+.back_form button,
+.edit_form button {
     margin-right: 10px;
     background-color: white;
     border: none;
@@ -196,4 +197,69 @@ svg.w-5.h-5 {
     background-color: #007bff;
     color: #fff;
     border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .review_inner {
+        flex-direction: column;
+    }
+
+    .shop_info {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .shop_review {
+        margin-left: 0;
+    }
+
+    .shop_name {
+        font-size: 20px;
+    }
+
+    .shop_img img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .shop_category li {
+        margin-right: 3px;
+    }
+
+    .review_form_inner {
+        margin: 10px 20px;
+    }
+
+    .review_submit button {
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+
+    .review_card_content {
+        height: auto;
+    }
+
+    .review_card {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .review_text {
+        font-size: 18px;
+    }
+
+    .form_group label {
+        font-size: 16px;
+    }
+
+    .form_group select,
+    .form_group textarea {
+        font-size: 16px;
+    }
+
+    .review_submit button {
+        padding: 6px 12px;
+    }
 }

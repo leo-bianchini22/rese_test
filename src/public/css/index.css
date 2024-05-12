@@ -133,3 +133,53 @@
     height: 32px;
     margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+    .header_inner_right {
+        height: auto;
+    }
+
+    .search_form {
+        flex-direction: column;
+    }
+
+    .search_select,
+    .search_input {
+        width: 260px;
+    }
+
+    .search_select {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        border-right: none;
+    }
+
+    .search_input {
+        border: none;
+    }
+
+    .shop_card_group {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .header_inner_right {
+        padding: 0;
+    }
+
+    .search_select,
+    .search_input {
+        padding: 5px;
+        width: 160px;
+    }
+
+    .search_submit img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .shop_card_group {
+        width: calc(50% - 20px);
+    }
+}

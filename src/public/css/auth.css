@@ -67,3 +67,46 @@
     border-radius: 5px;
     padding: 10px 15px;
 }
+
+@media (max-width: 768px) {
+    .auth_content {
+        padding: 5%;
+    }
+
+    .form {
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+    .form_inner {
+        width: 100%;
+    }
+
+    .form_ttl,
+    .form_group_content,
+    .form_button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .form_ttl {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .form_ttl p {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .form_group_content {
+        padding: 20px;
+    }
+
+    .form_input input {
+        width: 100%;
+    }
+
+    .form_button {
+        padding: 30px 20px;
+    }
+}

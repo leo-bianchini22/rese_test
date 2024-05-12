@@ -252,3 +252,68 @@
     border-radius: 5px;
     padding: 10px 15px;
 }
+
+@media (max-width: 768px) {
+    .detail_inner {
+        flex-direction: column;
+    }
+
+    .shop_info,
+    .shop_reservation {
+        width: 100%;
+        margin: 0;
+    }
+
+    .shop_edit {
+        margin-top: 20px;
+    }
+
+    .shop_form,
+    .reservation_form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .shop_img {
+        margin-top: 20px;
+    }
+
+    .shop_detail {
+        margin-top: 20px;
+    }
+
+    .review_info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review_info button {
+        margin-top: 10px;
+    }
+
+    .reservation_form_inner {
+        margin: 20px 0;
+    }
+
+    .form_input input,
+    .form_group select {
+        width: 100%;
+    }
+
+    .reservation_confirm {
+        margin-bottom: 50px;
+    }
+
+    .reservation_submit button,
+    .reservation_submit a {
+        width: 100%;
+    }
+
+    .edit_textarea {
+        margin-bottom: 50px;
+    }
+
+    .form_group_content {
+        padding-bottom: 10px;
+    }
+}

@@ -44,13 +44,13 @@
                             </table>
                         </div>
                     </div>
-                    <div class="paginate">
-                        {{ $reservations->render('pagination::bootstrap-4') }}
-                    </div>
                     @endforeach
                     @else
                     <p>予約がありません</p>
                     @endif
+                </div>
+                <div class="paginate">
+                    {{ $reservations->render('pagination::bootstrap-4') }}
                 </div>
             </div>
         </div>

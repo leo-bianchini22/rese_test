@@ -200,3 +200,37 @@
     height: 32px;
     margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+    .mypage_inner {
+        padding: 0 3% 100px;
+    }
+
+    .reservation_info,
+    .favorite_info {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .reservation_card,
+    .shop_card_group {
+        width: calc(100% - 10px);
+        margin-right: 0;
+        margin-bottom: 20px;
+        float: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .mypage_inner {
+        padding: 0 5px 100px;
+    }
+
+    .reservation_card,
+    .shop_card_group {
+        width: calc(100% - 10px);
+        margin-right: 0;
+        margin-bottom: 20px;
+        float: none;
+    }
+}

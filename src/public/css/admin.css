@@ -129,3 +129,28 @@ svg.w-5.h-5 {
     justify-content: space-between;
     margin: 5px 0;
 }
+
+@media (max-width: 768px) {
+    .admin_inner {
+        padding: 0 5%;
+    }
+
+    .representative_item {
+        width: 100%;
+        margin: 0;
+    }
+
+    .representative_card {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .admin_inner {
+        padding: 0 3%;
+    }
+
+    .representative_card {
+        flex-basis: 100%;
+    }
+}
