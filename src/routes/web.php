@@ -6,6 +6,7 @@ use App\Http\Controllers\NavigateController;
 use App\Http\Controllers\ReseController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,5 +46,7 @@ Route::get('/restaurant/edit', [AdminController::class, 'editRestaurant']);
 Route::post('/restaurant/update', [AdminController::class, 'updateRestaurant']);
 Route::post('/register/representative', [AdminController::class, 'storeRepresentative']);
 Route::get('/admin', [AdminController::class, 'admin']);
-Route::get('/admin/representative', [AdminController::class, 'representative']);
+Route::get('/admin/representative/{date?}', [AdminController::class, 'representative'])->name('representative');
 Route::delete('/representative/delete', [AdminController::class, 'deleteRepresentative']);
+//日付操作
+Route::post('/representative/date', [AdminController::class, 'representativeByDate']);

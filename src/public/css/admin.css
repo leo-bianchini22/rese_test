@@ -13,6 +13,53 @@
     font-weight: bold;
 }
 
+.date-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+.form button {
+    background-color: #007BFF;
+    /* ブルー */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+    /* ダークブルー */
+}
+
+.form input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.form input[type="date"]:read-only {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
 .representative_info,
 .reservation_info {
     margin-top: 20px;

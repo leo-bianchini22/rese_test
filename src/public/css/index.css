@@ -182,4 +182,12 @@
     .shop_card_group {
         width: calc(50% - 20px);
     }
+
+    .shop_review p {
+        font-size: 14px;
+    }
+
+    .star {
+        font-size: 14px;
+    }
 }

@@ -241,7 +241,7 @@ svg.w-5.h-5 {
     }
 
     .review_card {
-        margin: 20px 0;
+        margin: 20px;
     }
 }
 
@@ -261,5 +261,11 @@ svg.w-5.h-5 {
 
     .review_submit button {
         padding: 6px 12px;
+    }
+
+    .review_info {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50px;
     }
 }

@@ -11,6 +11,14 @@
             <p>{{ Auth::user()->name }}</p>
         </div>
         <div class="admin_item">
+            <div class="date-form">
+                <form class="form" action="/representative/date" method="post">
+                    @csrf
+                    <button type="submit" name="changeDate" value="return">&lt;</button>
+                    <input type="date" name="form__input-date" value="{{ $date }}" readonly></input>
+                    <button type="submit" name="changeDate" value="next">&gt;</button>
+                </form>
+            </div>
             <div class="reservation_info">
                 <div class="reservation_ttl">
                     <p>予約一覧</p>
