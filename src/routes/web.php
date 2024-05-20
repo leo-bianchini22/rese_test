@@ -22,31 +22,36 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ReseController::class, 'home']);
 Route::get('/search', [ReseController::class, 'search']);
-Route::get('/reservation/list', [ReseController::class, 'listReservation']);
+Route::middleware('auth')->group(function () {
+    Route::get('/mypage', [ReseController::class, 'myPage']);
+    Route::get('/reservation/list', [ReseController::class, 'listReservation']);
+});
 
 Route::get('/nav', [NavigateController::class, 'nav']);
 Route::post('/back', [NavigateController::class, 'previousPage']);
 
 Route::get('/detail/{id}', [ReservationController::class, 'detailById'])->name('shopId');
-Route::post('/detail/store', [ReservationController::class, 'storeReservation']);
-Route::delete('/reservation/delete', [ReservationController::class, 'deleteReservation']);
-Route::get('/reservation/edit', [ReservationController::class, 'editReservation']);
-Route::post('/reservation/update', [ReservationController::class, 'updateReservation']);
+Route::middleware('auth')->group(function () {
+    Route::post('/detail/store', [ReservationController::class, 'storeReservation']);
+    Route::delete('/reservation/delete', [ReservationController::class, 'deleteReservation']);
+    Route::get('/reservation/edit', [ReservationController::class, 'editReservation']);
+    Route::post('/reservation/update', [ReservationController::class, 'updateReservation']);
+});
 
 Route::get('/review', [ReviewController::class, 'review']);
 Route::post('/review/store', [ReviewController::class, 'store']);
 Route::get('/review/detail', [ReviewController::class, 'reviewDetail']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/mypage', [ReseController::class, 'myPage']);
     Route::post('/favorite/toggle/{id}', [FavoriteController::class, 'toggleFavorite'])->name('toggleFavorite');
 });
 
-Route::get('/restaurant/edit', [AdminController::class, 'editRestaurant']);
-Route::post('/restaurant/update', [AdminController::class, 'updateRestaurant']);
-Route::post('/register/representative', [AdminController::class, 'storeRepresentative']);
-Route::get('/admin', [AdminController::class, 'admin']);
-Route::get('/admin/representative/{date?}', [AdminController::class, 'representative'])->name('representative');
-Route::delete('/representative/delete', [AdminController::class, 'deleteRepresentative']);
-//日付操作
-Route::post('/representative/date', [AdminController::class, 'representativeByDate']);
+Route::middleware('auth')->group(function () {
+    Route::get('/restaurant/edit', [AdminController::class, 'editRestaurant']);
+    Route::post('/restaurant/update', [AdminController::class, 'updateRestaurant']);
+    Route::post('/register/representative', [AdminController::class, 'storeRepresentative']);
+    Route::get('/admin', [AdminController::class, 'admin']);
+    Route::get('/admin/representative/{date?}', [AdminController::class, 'representative'])->name('representative');
+    Route::delete('/representative/delete', [AdminController::class, 'deleteRepresentative']);
+    Route::post('/representative/date', [AdminController::class, 'representativeByDate']);
+});
