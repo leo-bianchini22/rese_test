@@ -82,8 +82,8 @@ class AdminController extends Controller
         }
 
         $reservations = Reservation::where('restaurant_id', $user->representative->restaurant_id)
-                                    ->whereDate('created_at', $date)
-                                    ->paginate(5);
+                                    ->whereDate('reservation_date', $date)
+                                    ->paginate(10);
 
         return view('admin-representative', compact('reservations' , 'date'));
     }
